@@ -4405,12 +4405,12 @@ textarea.input {
 }
 
 @media (max-width: 22.5em) {
-  .header__logo {
+/*   .header__logo {
     width: 2.5rem;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 2.5rem;
             flex: 0 0 2.5rem;
-  }
+  } */
 
   .socials__phone {
     font-size: 0.75rem;
