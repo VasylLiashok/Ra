@@ -268,14 +268,13 @@ h6 {
 }
 
 .button::before {
-  content: url("../img/button-decor.svg");
+  content: "";
   position: absolute;
-  width: 74.782609%;
-  /* 172/230 */
-  height: 90.909091%;
-  /* 60/66 */
-  bottom: 0;
-  right: -0.625rem;
+  background: url("../img/button-decor.svg") 100% 100%/cover no-repeat;
+  width: 90.782609%;
+  height: 105.909091%;
+  bottom: -4px;
+  right: -1rem;
 }
 
 .button--fw {
@@ -1632,6 +1631,10 @@ textarea.input {
   -webkit-column-gap: 0.5rem;
      -moz-column-gap: 0.5rem;
           column-gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 1.375rem;
+  width: 100%;
+  background: #ffeb90;
 }
 
 .item-preorder__price-label {
@@ -1639,9 +1642,6 @@ textarea.input {
 }
 
 .item-preorder__prices {
-  padding: 1.5rem 1.5rem 3.9375rem;
-  border-radius: 1.375rem;
-  background: #ffeb90;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1666,8 +1666,18 @@ textarea.input {
   margin-bottom: 0.625rem;
 }
 
+.item-preorder__prices-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+}
+
 .item-preorder__price--old {
-  color: #966969;
+  font-weight: 500;
   text-decoration: line-through;
 }
 
@@ -1684,10 +1694,9 @@ textarea.input {
 }
 
 .item-preorder__button {
-  width: 13.125rem;
+  width: 100%;
   min-height: 3.75rem;
-  margin-top: -2rem;
-  margin-left: 1.5rem;
+  margin-top: 0.625rem;
 }
 
 .item-preorder__button._hold {
@@ -2907,6 +2916,10 @@ textarea.input {
         -ms-flex-pack: start;
             justify-content: start;
   }
+
+  .item-preorder__footer {
+    max-width: 26.125rem;
+  }
 }
 
 @media (min-width: 47.99875em) {
@@ -3203,7 +3216,7 @@ textarea.input {
   }
 
   .item-preorder__price--old {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 
   .additional__price {
@@ -3913,8 +3926,8 @@ textarea.input {
             flex: 1 1 auto;
   }
 
-  .item-preorder__prices {
-    padding: 1.25rem 1.25rem 3rem;
+  .item-preorder__footer {
+    padding: 1.25rem;
   }
 
   .item-preorder__button {
@@ -4323,10 +4336,6 @@ textarea.input {
     padding: 0.75rem;
   }
 
-  .item-preorder__button {
-    width: 10rem;
-  }
-
   .item-preorder__image-ibg img {
     -o-object-position: top;
        object-position: top;
@@ -4405,13 +4414,6 @@ textarea.input {
 }
 
 @media (max-width: 22.5em) {
-/*   .header__logo {
-    width: 2.5rem;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 2.5rem;
-            flex: 0 0 2.5rem;
-  } */
-
   .socials__phone {
     font-size: 0.75rem;
   }
@@ -4742,15 +4744,15 @@ textarea.input {
     }
 }
 
-@supports (font-size: clamp( 1rem , 0.8202247191rem  +  0.8988764045vw , 1.5rem )) {
+@supports (font-size: clamp( 1rem , 0.8651685393rem  +  0.6741573034vw , 1.375rem )) {
     .item-preorder__price--old {
-      font-size: clamp( 1rem , 0.8202247191rem  +  0.8988764045vw , 1.5rem );
+      font-size: clamp( 1rem , 0.8651685393rem  +  0.6741573034vw , 1.375rem );
     }
 }
 
-@supports not (font-size: clamp( 1rem , 0.8202247191rem  +  0.8988764045vw , 1.5rem )) {
+@supports not (font-size: clamp( 1rem , 0.8651685393rem  +  0.6741573034vw , 1.375rem )) {
     .item-preorder__price--old {
-      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 55.625);
+      font-size: calc(1rem + 0.375 * (100vw - 20rem) / 55.625);
     }
 }
 
